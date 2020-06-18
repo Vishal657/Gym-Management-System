@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+p {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 5px;
+}
+
+h1 {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 5px;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="topnav">
+  <a class="active" href="cushome">Home</a>
+  {%if x is None%}
+  <a href="{% url 'user_login' %}">Login</a>
+  <a href="{% url 'signup' %}">Signup</a>
+  {%endif%}
+  <a href="{% url 'aboutus' %}">About Us</a>
+  <img src="{% static 'img-10.jpeg' %}" width="50px">
+  <font face="ROG fonts" color="White">Fit and Fab Gym Center</font>
+</div>
+
+<table width="100%" bgcolor="#eaeaea">
+  <tr>
+    <td>
+      <div>
+        <div> <font family="Lucida Console" align="center" color="orange">
+          <h3>
+            <b> 385 </b>
+          </h3>
+        </div>
+      </div>
+    </td>
+
+    <td>
+      <div>
+        <div> <font family="Lucida Console" align="center">
+          <h3>
+            <b> 15,000+ </b>
+          </h3>
+        </div>
+      </div>
+    </td>
+
+    <td>
+      <div>
+        <div> <font family="Lucida Console" align="center" color="orange">
+          <h3>
+            <b> 5 star average </b>
+          </h3>
+        </div>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div>
+        <div> <font family="Lucida Console" align="center">
+          <h3>
+              EQUIPMENTS
+          </h3>
+        </div>
+      </div>
+    </td>
+
+    <td>
+      <div>
+        <div> <font family="Lucida Console" align="center">
+          <h3>
+             CUSTOMERS
+          </h3>
+        </div>
+      </div>
+    </td>
+
+    <td>
+      <div>
+        <div> <font family="Lucida Console" align="center">
+          <h3>
+              FEEDBACK
+          </h3>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<img src="{% static 'gym-logo-large.jpg' %}", align="right">
+
+<h1>
+      <b>Our Story</b>
+</h1>
+
+<p style="text-align: justify;text-justify: auto;margin-left:5px">
+  <span style="color: #000000;">
+    Fit and Fab Gym was founded in 2002 as a family owned and operated business. The Fit and Fab Gym founders didn’t <br>
+    want it to be just another gym - they wanted to be the best in the industry and set their minds to doing so! Since <br>
+    its birth, Fit and Fab Gym has grown into one of Australia’s largest gym having helped over 50,000 customers live <br>
+    longer, happier and healthier lives. <br>
+ </span>
+</p>
+
+<br> <br>
+
+<h1 style="text-align:left";>
+      <b>What We Do</b>
+</h1>
+
+<p style="text-align: left;">
+  <span style="color: #000000;">
+    We want to help you live a fit and healthy lifestyle! We do this by helping you find the most suitable exercises <br>
+    and diet for your home gym, studio or commercial gym, keeping your budget, lifestyle and fitness goals in mind. <br>
+  </span>
+</p>
+
+<br> <br>
+
+
+<h1 style="text-align:justify;text-justify:auto;">
+      <b>Customer Service</b>
+</h1>
+
+<p style="text-align: left;">
+  <span style="color: #000000;">
+    At Gym and Fitness, customers are at the centre of what we do and why we do it! We have a team of knowledgeable trainers<br>
+    who are ready to assist you with your fitness needs. Our crew will be able to answer your questions from honest product <br>
+    information to the best way to integrate a piece of equipment into your workout routine. We work hard to ensure we have <br>
+    strong relationships with our customers, bringing you the best possible in the industry.</span>
+</p>
+
+<table width="40%" align = "right">
+<tr>
+  <td> Location : <a href=""> Fit and Fab Gym </a></td>
+  <td> Contact No. : 1234567890 </td>
+</tr>
+
+<tr>
+ <td>                                             </td>
+ <td> Telephone   : +1-234-567-980 </td>
+</tr>
+
+<tr>
+  <td> E - mail : <a href=""> fitandfab@gmail.com </a> </td>
+  <td> <a href=""> Terms & Conditions </a> </td>
+</tr>
+</table>
+
+</body>
+</html>

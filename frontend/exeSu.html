@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+}
+      
+
+
+input[type=button], input[type=submit], input[type=reset] {
+        background-color: rgb(54, 139, 235);
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+textarea {
+  width: 80%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+input[type=text] {
+    width: 20%;
+    height: 30px;
+    border: 2px solid rgb(245, 231, 186);
+    border-radius: 1px;
+  }
+
+</style>
+</head>
+<body>
+  <h4  style="color: rgb(0, 0, 0);" ><strong>Please donot use '_' symbol!</strong> </h4>
+    <h2 align='center' style="color: tomato;" ><strong>Exerscise</strong> </h2>
+    <div class="container">
+    <form action="sun" method="post">
+        {% csrf_token %}  
+        
+        <h3  align='center'style="color: rgb(13, 100, 231);" ><strong>Sunday:</strong> </h3>
+        <div align='left'>
+        <input type="text" name="t1" value='{{t1}}' placeholder="Target Muscles" pattern="[^_]+"required><br><br>
+        <input type="hidden" name='y7' value="{{y7}}">
+    </div>
+    <div align='left'>
+        {%if y7 %}
+        {%for i in y7%}
+        <input type="text" value='{{i}}' name="{{i}}" placeholder="Exerscise" pattern="[^_]+"required>
+        {%endfor%}
+        {%endif%}
+        {%if name%}
+        <input type="text" name={{name}} placeholder="Exerscise" pattern="[^_]+">
+        {%endif%}
+        <input  type="submit" value="remove" name="remove" > <input  type="submit" value="add" name="add">
+
+    </div>
+
+        <div align='center'>
+        <input  type="submit" value="Ok" name="OK">
+        </div>
+    </form>
+    </div>
+    {%if log %}
+    <script>alert('Cannot submit an empty field');</script>
+    {%endif%}
+</body>
+</html>
